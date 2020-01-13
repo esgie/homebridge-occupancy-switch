@@ -9,8 +9,9 @@ module.exports = function(homebridge) {
 
 function OccupancySwitchAccessory(log, config) {
   this.log = log;
-  this.occupancySensorName = config["occupancy_sensor_name"];
-  this.switchName = config["switch_name"];
+  this.occupancySensorName = config["occupancy_sensor_name"] ? config["occupancy_sensor_name"] : "Occupancy sensor";
+  this.switchName = config["switch_name"] ? config["switch_name"] : "Occupancy switch";
+  this.switchStateful = config["stateful"] ? config["stateful"] : false;
   this.switchState = false;
   this.occupancySensorState = false;
 
