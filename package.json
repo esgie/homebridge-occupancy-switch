@@ -1,17 +1,22 @@
 {
   "name": "homebridge-occupancy-switch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Occupancy Switch plugin for homebridge: https://github.com/nfarina/homebridge",
   "license": "ISC",
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "occupation",
+    "occupancy",
+    "switch",
+    "sensor",
+    "trigger"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/theo-69/homebridge-occupancy-switch.git"
+    "url": "git://github.com/esgie/homebridge-occupancy-switch.git"
   },
   "bugs": {
-    "url": "http://github.com/theo-69/homebridge-occupancy-switch/issues"
+    "url": "http://github.com/esgie/homebridge-occupancy-switch/issues"
   },
   "engines": {
     "node": ">=0.12.0",
