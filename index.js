@@ -47,7 +47,14 @@ OccupancySwitchAccessory.prototype.trigger = function() {
   if (this.switchState) {
     this.occupancySensorState = 1;
     this.occupancySensorService.setCharacteristic(Characteristic.OccupancyDetected, Boolean(this.occupancySensorState));
-    setTimeout(this.resetSensors, 1000, this);
+    if (!this.switchStateful) {
+      setTimeout(this.resetSensors, 1000, this);
+    }
+  } else {
+    if (this.switchStateful) {
+      this.occupancySensorState = 0;
+      this.occupancySensorService.setCharacteristic(Characteristic.OccupancyDetected, Boolean(this.occupancySensorState));
+    }
   }
 }
 
